@@ -1,0 +1,84 @@
+{
+  "timezone": "Asia/Shanghai",
+  "candidate_self_report": {
+    "reported_on": "2026-10-31",
+    "overall_effort_hours_approx": 3,
+    "contribution": "亲自检查关键节点的准确性",
+    "timing_scope": "候选人说明的全程约数，不与AI观测窗口相加，不声称逐段精确计时",
+    "detailed_check_notes": "尚未提供具体节点及核对步骤，不扩写为已执行完整测试或个人代码修改"
+  },
+  "recorded_implementation_start": "2026-10-30T17:19:10+08:00",
+  "final_verification_checkpoint": "2026-10-30T17:37:27+08:00",
+  "observed_elapsed_seconds": 1097,
+  "observed_elapsed_minutes": 18.28,
+  "scope": "本轮首次检查现有草稿后的可观测实现、测试、样例生成和文档整理窗口，截至最终验证检查点。不代表完整考试总用时。",
+  "unmeasured": [
+    "前期需求与方案讨论",
+    "较早创建的部分草稿",
+    "候选人个人投入时间",
+    "检查点后的交付回复"
+  ],
+  "langgraph_refactor": {
+    "recorded_start": "2026-10-30T18:19:19+08:00",
+    "final_verification_checkpoint": "2026-10-30T18:30:31+08:00",
+    "observed_elapsed_seconds": 672,
+    "observed_elapsed_minutes": 11.2,
+    "scope": "本轮读取项目、检查现有框架版本、重构、测试、CLI样例和文档整理窗口；不含此前方案讨论或候选人个人时间。",
+    "langgraph_version": "1.2.9",
+    "langgraph_checkpoint_version": "4.1.1",
+    "original_tests_preserved": 26,
+    "new_graph_tests": 13,
+    "tests_passed": 39,
+    "initial_regression": "1项快照筛选断言失败，修正测试筛选条件后通过；保留初始报告",
+    "cli_cases": 13,
+    "saved_example_plans": 4,
+    "test_report": "examples/test-results-langgraph.txt",
+    "example_report": "examples/langgraph-run/summary.json",
+    "checkpoint_verification": "已验证进程内快照、历史及隔离；未实现恢复",
+    "real_llm_traces": 0
+  },
+  "verification": {
+    "python_version": "3.11.7",
+    "automated_tests_run": 26,
+    "automated_tests_passed": 26,
+    "cli_example_cases": 13,
+    "saved_example_plans": 4,
+    "real_llm_traces": 0,
+    "real_llm_status": "未执行：目前无API",
+    "test_report": "examples/test-results.txt",
+    "example_report": "examples/offline-run/summary.json",
+    "stage": "historical_native_python_initial_snapshot"
+  },
+  "deepseek_validation": {
+    "recorded_at": "2026-10-30T20:20:12.092720+08:00",
+    "development_elapsed_minutes": null,
+    "time_note": "本轮开发总用时未单独计时；以下程序运行时间来自实际输出，不代表完整开发用时。",
+    "api_first_started_at": "2026-10-30T12:13:26.471460+00:00",
+    "api_last_finished_at": "2026-10-30T12:14:43.473733+00:00",
+    "task_runtimes_seconds": [
+      11.0,
+      13.062
+    ],
+    "model": "deepseek-flash",
+    "thinking": "disabled",
+    "total_api_calls": 16,
+    "provider_total_tokens": 37209,
+    "real_llm_traces": 2,
+    "tests_passed": 46,
+    "test_report": "examples/test-results-deepseek.txt",
+    "example_report": "examples/deepseek-run/summary.json",
+    "all_saved_results_verified": true
+  },
+  "delivery_check": {
+    "checked_at": "2026-10-31T11:23:10.324831+00:00",
+    "final_report_updated_at": "2026-10-31T11:25:19.706892+00:00",
+    "isolated_environment": true,
+    "tests_passed": 46,
+    "cli_cases": 13,
+    "readme_cli_actual_save_verified": true,
+    "new_llm_api_calls": 0,
+    "result": "local automated checks passed; GitHub delivery pending",
+    "report": "examples/submission-check-20261031/summary.json",
+    "scope_note": "Contains dependency download waiting; kept separate from candidate self-reported approximately 3 hours"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "request": {
+    "request_id": "missing-deadline",
+    "topic": "虚构新品推广",
+    "budget": 10.0
+  },
+  "status": "needs_input",
+  "reason": "请提供有效 deadline_hours（预算非负，截止小时数为正）",
+  "steps": [],
+  "current_plan": null,
+  "plan_version": 0,
+  "latest_estimate": null,
+  "errors": [],
+  "execution_count": 0,
+  "model_calls": 0,
+  "tool_calls": 0,
+  "save_result": null,
+  "metadata": {
+    "mode": "mock",
+    "scenario": "normal",
+    "decision_evidence": "none_scripted_actions",
+    "started_at": "2026-10-30T09:32:02.210768+00:00",
+    "finished_at": "2026-10-30T09:32:02.210768+00:00",
+    "runtime_seconds": 0.0,
+    "max_steps": 12,
+    "max_model_calls": 12
+  },
+  "trace_file": "D:\\xiaoying\\examples\\offline-run\\missing_deadline.trace.json"
+}

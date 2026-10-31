@@ -1,0 +1,10 @@
+{
+  "synthetic": true,
+  "accounting": "最终活动计划的预计业务费用与串行耗时；不含Agent运行和API费用",
+  "formats": {
+    "campaign_video": {"name":"精制短视频制作","cost_units":5,"duration_minutes":300},
+    "social_post": {"name":"标准推广图文制作","cost_units":5,"duration_minutes":240},
+    "quick_post": {"name":"简版图文制作","cost_units":2,"duration_minutes":60}
+  },
+  "review": {"cost_units":1,"duration_minutes":60}
+}

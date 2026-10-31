@@ -1,0 +1,3 @@
+# Python >= 3.10; tested framework and checkpoint versions.
+langgraph==1.2.9
+langgraph-checkpoint==4.1.1

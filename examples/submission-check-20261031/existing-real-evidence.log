@@ -1,0 +1,86 @@
+{
+  "mode": "llm",
+  "verification": "offline_artifact_checks_after_real_api_execution",
+  "cases": [
+    {
+      "case": "normal",
+      "status": "completed",
+      "model": "deepseek-flash",
+      "thinking": "disabled",
+      "api_calls": 8,
+      "started_at": "2026-10-30T12:13:26.471460+00:00",
+      "finished_at": "2026-10-30T12:13:37.467994+00:00",
+      "runtime_seconds": 11.0,
+      "saved_verified": true,
+      "cost_sequence": [
+        12,
+        4
+      ],
+      "duration_sequence_minutes": [
+        420,
+        150
+      ],
+      "failed_steps": [
+        {
+          "step": 2,
+          "tool": "generate_script",
+          "error": "\u7d20\u6750 M01 \u4e0d\u652f\u6301\u5185\u5bb9\u5f62\u5f0f quick_post"
+        }
+      ],
+      "action_sequence": [
+        "search_materials",
+        "generate_script",
+        "generate_script",
+        "estimate_plan",
+        "search_materials",
+        "generate_script",
+        "estimate_plan",
+        "save_plan"
+      ],
+      "provider_total_tokens": 18287,
+      "trace": "normal.trace.json",
+      "output": "normal.output.json"
+    },
+    {
+      "case": "tool_failure",
+      "status": "completed",
+      "model": "deepseek-flash",
+      "thinking": "disabled",
+      "api_calls": 8,
+      "started_at": "2026-10-30T12:14:30.417759+00:00",
+      "finished_at": "2026-10-30T12:14:43.473733+00:00",
+      "runtime_seconds": 13.062,
+      "saved_verified": true,
+      "cost_sequence": [
+        12,
+        4
+      ],
+      "duration_sequence_minutes": [
+        420,
+        150
+      ],
+      "failed_steps": [
+        {
+          "step": 3,
+          "tool": "estimate_plan",
+          "error": "\u6ce8\u5165\u7684\u5355\u6b21\u5de5\u5177\u6545\u969c\uff1aestimate_plan"
+        }
+      ],
+      "action_sequence": [
+        "search_materials",
+        "generate_script",
+        "estimate_plan",
+        "estimate_plan",
+        "search_materials",
+        "generate_script",
+        "estimate_plan",
+        "save_plan"
+      ],
+      "provider_total_tokens": 18922,
+      "trace": "tool_failure.trace.json",
+      "output": "tool_failure.output.json"
+    }
+  ],
+  "total_api_calls": 16,
+  "all_saved_results_verified": true
+}

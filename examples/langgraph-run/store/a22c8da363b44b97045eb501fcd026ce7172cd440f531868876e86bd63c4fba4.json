@@ -1,0 +1,10 @@
+{
+  "request": {
+    "request_id": "example-step-limit",
+    "topic": "虚构新品推广",
+    "budget": 10.0,
+    "deadline_hours": 8.0
+  },
+  "request_hash": "44a913c065ff623abdfee5dc39641b5d8a0923b76e0603a347fdc0a909887417",
+  "saved_plan": null
+}

@@ -1,0 +1,10 @@
+{
+  "request": {
+    "request_id": "example-time",
+    "topic": "虚构新品推广",
+    "budget": 10.0,
+    "deadline_hours": 5.0
+  },
+  "request_hash": "fd2ff6897b476224ea187196238eb5ea6a9c6a2d04d33f274b7f58c01f101744",
+  "saved_plan": null
+}

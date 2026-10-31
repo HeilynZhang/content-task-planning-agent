@@ -1,0 +1,323 @@
+{
+  "metadata": {
+    "mode": "mock",
+    "scenario": "infeasible",
+    "decision_evidence": "none_scripted_actions",
+    "started_at": "2026-10-30T10:25:13.182887+00:00",
+    "finished_at": "2026-10-30T10:25:13.199196+00:00",
+    "runtime_seconds": 0.016,
+    "max_steps": 12,
+    "max_model_calls": 12,
+    "engine": "langgraph",
+    "langgraph_version": "1.2.9",
+    "run_id": "d34e1a12-9268-4866-a165-c4bb594286d8",
+    "checkpointer": "InMemorySaver",
+    "checkpoint_scope": "process_memory_only",
+    "resume_supported": false
+  },
+  "request": {
+    "topic": "虚构新品推广",
+    "budget": 0,
+    "deadline_hours": 0.5,
+    "request_id": "example-infeasible"
+  },
+  "events": [
+    {
+      "timestamp": "2026-10-30T10:25:13.191072+00:00",
+      "step": 1,
+      "event": "model_action",
+      "decision_node": "decision",
+      "action": {
+        "type": "tool",
+        "name": "search_materials",
+        "arguments": {
+          "query": "低成本"
+        },
+        "reason": "离线预设：查最便宜素材"
+      },
+      "tool_node": "execute_tool",
+      "observation": {
+        "step": 1,
+        "tool": "search_materials",
+        "arguments": {
+          "query": "低成本"
+        },
+        "status": "succeeded",
+        "result": {
+          "materials": [
+            {
+              "id": "M03",
+              "title": "新品界面截图",
+              "description": "可复用的虚构界面截图，适用于简版图文",
+              "tags": [
+                "新品",
+                "春季新品",
+                "推广",
+                "简版",
+                "低成本"
+              ],
+              "facts": [
+                "虚构产品提供基础裁剪入口。"
+              ],
+              "formats": [
+                "quick_post"
+              ],
+              "cost_units": 1,
+              "preparation_minutes": 30
+            }
+          ],
+          "count": 1,
+          "note": "本地关键词检索；空结果不等于所有查询都无资料，可改写查询。"
+        }
+      },
+      "result_summary": {
+        "count": 1,
+        "material_ids": [
+          "M03"
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-10-30T10:25:13.192192+00:00",
+      "step": 2,
+      "event": "model_action",
+      "decision_node": "decision",
+      "action": {
+        "type": "tool",
+        "name": "generate_script",
+        "arguments": {
+          "material_ids": [
+            "M03"
+          ],
+          "format": "quick_post"
+        },
+        "reason": "离线预设：生成最简方案"
+      },
+      "tool_node": "execute_tool",
+      "observation": {
+        "step": 2,
+        "tool": "generate_script",
+        "arguments": {
+          "material_ids": [
+            "M03"
+          ],
+          "format": "quick_post"
+        },
+        "status": "succeeded",
+        "result": {
+          "plan": {
+            "topic": "虚构新品推广",
+            "constraints": {
+              "budget": 0.0,
+              "deadline_hours": 0.5
+            },
+            "material_ids": [
+              "M03"
+            ],
+            "materials": [
+              {
+                "id": "M03",
+                "title": "新品界面截图",
+                "description": "可复用的虚构界面截图，适用于简版图文",
+                "tags": [
+                  "新品",
+                  "春季新品",
+                  "推广",
+                  "简版",
+                  "低成本"
+                ],
+                "facts": [
+                  "虚构产品提供基础裁剪入口。"
+                ],
+                "formats": [
+                  "quick_post"
+                ],
+                "cost_units": 1,
+                "preparation_minutes": 30
+              }
+            ],
+            "format": "quick_post",
+            "script": {
+              "title": "虚构新品推广：新品功能介绍",
+              "sections": [
+                {
+                  "text": "虚构产品提供基础裁剪入口。",
+                  "source_material_id": "M03"
+                }
+              ],
+              "closing": "了解新品功能，选择适合自己的内容制作方式。",
+              "generation_mode": "local_synthetic_template"
+            },
+            "business_steps": [
+              {
+                "id": "prepare",
+                "name": "素材准备",
+                "depends_on": [],
+                "status": "planned",
+                "deliverable": "核对素材与来源",
+                "cost_units": 1,
+                "duration_minutes": 30
+              },
+              {
+                "id": "produce",
+                "name": "简版图文制作",
+                "depends_on": [
+                  "prepare"
+                ],
+                "status": "planned",
+                "deliverable": "按脚本制作内容",
+                "cost_units": 2,
+                "duration_minutes": 60
+              },
+              {
+                "id": "review",
+                "name": "审核整理",
+                "depends_on": [
+                  "produce"
+                ],
+                "status": "planned",
+                "deliverable": "可交付内容包",
+                "cost_units": 1,
+                "duration_minutes": 60
+              }
+            ]
+          },
+          "note": "生成的是规划草稿，业务步骤尚未实际执行。"
+        }
+      },
+      "result_summary": {
+        "plan_version": 1,
+        "material_ids": [
+          "M03"
+        ],
+        "format": "quick_post",
+        "estimate_invalidated": true
+      }
+    },
+    {
+      "timestamp": "2026-10-30T10:25:13.194196+00:00",
+      "step": 3,
+      "event": "model_action",
+      "decision_node": "decision",
+      "action": {
+        "type": "tool",
+        "name": "estimate_plan",
+        "arguments": {},
+        "reason": "离线预设：估算最简方案"
+      },
+      "tool_node": "execute_tool",
+      "observation": {
+        "step": 3,
+        "tool": "estimate_plan",
+        "arguments": {},
+        "status": "succeeded",
+        "result": {
+          "plan_version": 1,
+          "plan_fingerprint": "8d4c117e9c52035c07be0ddefdc8e41ee502aa2dfea1b2d5bff722f5baafae39",
+          "cost_units": 4,
+          "duration_minutes": 150,
+          "estimated_hours": 2.5,
+          "budget_ok": false,
+          "deadline_ok": false,
+          "constraints_met": false,
+          "budget_shortfall": 4.0,
+          "time_shortfall_minutes": 120.0,
+          "business_steps": [
+            {
+              "id": "prepare",
+              "name": "素材准备",
+              "depends_on": [],
+              "status": "planned",
+              "deliverable": "核对素材与来源",
+              "cost_units": 1,
+              "duration_minutes": 30
+            },
+            {
+              "id": "produce",
+              "name": "简版图文制作",
+              "depends_on": [
+                "prepare"
+              ],
+              "status": "planned",
+              "deliverable": "按脚本制作内容",
+              "cost_units": 2,
+              "duration_minutes": 60
+            },
+            {
+              "id": "review",
+              "name": "审核整理",
+              "depends_on": [
+                "produce"
+              ],
+              "status": "planned",
+              "deliverable": "可交付内容包",
+              "cost_units": 1,
+              "duration_minutes": 60
+            }
+          ]
+        }
+      },
+      "result_summary": {
+        "cost_units": 4,
+        "duration_minutes": 150,
+        "budget_ok": false,
+        "deadline_ok": false,
+        "budget_shortfall": 4.0,
+        "time_shortfall_minutes": 120.0
+      }
+    },
+    {
+      "timestamp": "2026-10-30T10:25:13.197196+00:00",
+      "step": 4,
+      "event": "model_action",
+      "decision_node": "decision",
+      "action": {
+        "type": "finish",
+        "status": "incomplete",
+        "reason": "离线预设：最低成本方案仍不满足约束，请调整需求"
+      },
+      "observation": {
+        "status": "incomplete",
+        "reason": "离线预设：最低成本方案仍不满足约束，请调整需求"
+      }
+    }
+  ],
+  "node_events": [
+    {
+      "node": "prepare",
+      "timestamp": "2026-10-30T10:25:13.188726+00:00"
+    },
+    {
+      "node": "decision",
+      "timestamp": "2026-10-30T10:25:13.191072+00:00"
+    },
+    {
+      "node": "execute_tool",
+      "timestamp": "2026-10-30T10:25:13.192192+00:00"
+    },
+    {
+      "node": "decision",
+      "timestamp": "2026-10-30T10:25:13.192192+00:00"
+    },
+    {
+      "node": "execute_tool",
+      "timestamp": "2026-10-30T10:25:13.193195+00:00"
+    },
+    {
+      "node": "decision",
+      "timestamp": "2026-10-30T10:25:13.194196+00:00"
+    },
+    {
+      "node": "execute_tool",
+      "timestamp": "2026-10-30T10:25:13.195195+00:00"
+    },
+    {
+      "node": "decision",
+      "timestamp": "2026-10-30T10:25:13.197196+00:00"
+    },
+    {
+      "node": "finalize",
+      "timestamp": "2026-10-30T10:25:13.200197+00:00"
+    }
+  ]
+}

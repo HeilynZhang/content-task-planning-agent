@@ -1,0 +1,46 @@
+{
+  "request": {
+    "request_id": "missing-deadline",
+    "topic": "虚构新品推广",
+    "budget": 10.0
+  },
+  "status": "needs_input",
+  "reason": "请提供有效 deadline_hours（预算非负，截止小时数为正）",
+  "steps": [],
+  "current_plan": null,
+  "plan_version": 0,
+  "latest_estimate": null,
+  "errors": [],
+  "execution_count": 0,
+  "model_calls": 0,
+  "tool_calls": 0,
+  "save_result": null,
+  "metadata": {
+    "mode": "mock",
+    "scenario": "normal",
+    "decision_evidence": "none_scripted_actions",
+    "started_at": "2026-10-30T10:25:05.004951+00:00",
+    "finished_at": "2026-10-30T10:25:05.011307+00:00",
+    "runtime_seconds": 0.0,
+    "max_steps": 12,
+    "max_model_calls": 12,
+    "engine": "langgraph",
+    "langgraph_version": "1.2.9",
+    "run_id": "bdf28d6a-2bad-43bb-b993-232cd936acd4",
+    "checkpointer": "InMemorySaver",
+    "checkpoint_scope": "process_memory_only",
+    "resume_supported": false
+  },
+  "node_events": [
+    {
+      "node": "prepare",
+      "timestamp": "2026-10-30T10:25:05.011307+00:00"
+    },
+    {
+      "node": "finalize",
+      "timestamp": "2026-10-30T10:25:05.012311+00:00"
+    }
+  ],
+  "last_observation": null,
+  "trace_file": "D:\\xiaoying\\examples\\langgraph-run\\missing_deadline.trace.json"
+}

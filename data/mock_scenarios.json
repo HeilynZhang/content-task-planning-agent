@@ -1,0 +1,52 @@
+{
+  "normal": [
+    {"type":"tool","name":"search_materials","arguments":{"query":"新品"},"reason":"离线预设：查询素材"},
+    {"type":"tool","name":"generate_script","arguments":{"material_ids":["M02"],"format":"social_post"},"reason":"离线预设：生成标准图文"},
+    {"type":"tool","name":"estimate_plan","arguments":{},"reason":"离线预设：检查双重约束"},
+    {"type":"tool","name":"save_plan","arguments":{},"reason":"离线预设：尝试保存"}
+  ],
+  "budget_replan": [
+    {"type":"tool","name":"search_materials","arguments":{"query":"新品"},"reason":"离线预设：查询素材"},
+    {"type":"tool","name":"generate_script","arguments":{"material_ids":["M01"],"format":"campaign_video"},"reason":"离线预设：生成初稿"},
+    {"type":"tool","name":"estimate_plan","arguments":{},"reason":"离线预设：检查初稿"},
+    {"type":"tool","name":"search_materials","arguments":{"query":"图文","exclude_ids":["M01"]},"reason":"离线预设：覆盖超预算后的替代查询流程"},
+    {"type":"tool","name":"generate_script","arguments":{"material_ids":["M02"],"format":"social_post"},"reason":"离线预设：更换内容形式"},
+    {"type":"tool","name":"estimate_plan","arguments":{},"reason":"离线预设：重新估算"},
+    {"type":"tool","name":"save_plan","arguments":{},"reason":"离线预设：尝试保存替代方案"}
+  ],
+  "tool_retry": [
+    {"type":"tool","name":"search_materials","arguments":{"query":"新品"},"reason":"离线预设：查询素材"},
+    {"type":"tool","name":"generate_script","arguments":{"material_ids":["M02"],"format":"social_post"},"reason":"离线预设：生成图文"},
+    {"type":"tool","name":"estimate_plan","arguments":{},"reason":"离线预设：首次估算（测试注入失败）"},
+    {"type":"tool","name":"estimate_plan","arguments":{},"reason":"离线预设：复用已有脚本再估算"},
+    {"type":"tool","name":"save_plan","arguments":{},"reason":"离线预设：保存"}
+  ],
+  "save_failure": [
+    {"type":"tool","name":"search_materials","arguments":{"query":"新品"},"reason":"离线预设：查询"},
+    {"type":"tool","name":"generate_script","arguments":{"material_ids":["M02"],"format":"social_post"},"reason":"离线预设：生成"},
+    {"type":"tool","name":"estimate_plan","arguments":{},"reason":"离线预设：估算"},
+    {"type":"tool","name":"save_plan","arguments":{},"reason":"离线预设：保存（测试注入失败）"},
+    {"type":"finish","status":"incomplete","reason":"离线预设：保存失败，停止并保留已完成结果"}
+  ],
+  "infeasible": [
+    {"type":"tool","name":"search_materials","arguments":{"query":"低成本"},"reason":"离线预设：查最便宜素材"},
+    {"type":"tool","name":"generate_script","arguments":{"material_ids":["M03"],"format":"quick_post"},"reason":"离线预设：生成最简方案"},
+    {"type":"tool","name":"estimate_plan","arguments":{},"reason":"离线预设：估算最简方案"},
+    {"type":"finish","status":"incomplete","reason":"离线预设：最低成本方案仍不满足约束，请调整需求"}
+  ],
+  "time_exceeded": [
+    {"type":"tool","name":"search_materials","arguments":{"query":"新品"},"reason":"离线预设：查询"},
+    {"type":"tool","name":"generate_script","arguments":{"material_ids":["M02"],"format":"social_post"},"reason":"离线预设：生成标准方案"},
+    {"type":"tool","name":"estimate_plan","arguments":{},"reason":"离线预设：检查时间"},
+    {"type":"tool","name":"save_plan","arguments":{},"reason":"离线预设：测试工具拒绝超时方案"},
+    {"type":"finish","status":"incomplete","reason":"离线预设：时间约束不满足，停止"}
+  ],
+  "time_replan": [
+    {"type":"tool","name":"search_materials","arguments":{"query":"新品"},"reason":"离线预设：查询"},
+    {"type":"tool","name":"generate_script","arguments":{"material_ids":["M02"],"format":"social_post"},"reason":"离线预设：标准方案"},
+    {"type":"tool","name":"estimate_plan","arguments":{},"reason":"离线预设：估算标准方案"},
+    {"type":"tool","name":"generate_script","arguments":{"material_ids":["M03"],"format":"quick_post"},"reason":"离线预设：覆盖缩短耗时的替代方案流程"},
+    {"type":"tool","name":"estimate_plan","arguments":{},"reason":"离线预设：重新估算简版"},
+    {"type":"tool","name":"save_plan","arguments":{},"reason":"离线预设：保存"}
+  ]
+}

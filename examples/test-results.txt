@@ -1,0 +1,35 @@
+Executed at 2026-10-30T09:36:29.024885+00:00
+Command: python -m unittest discover -s tests -v
+Mode: offline; HTTP adapter uses stubbed transport
+
+test_invalid_api_response_is_not_treated_as_an_action (test_agent.AdapterTests.test_invalid_api_response_is_not_treated_as_an_action) ... ok
+test_missing_api_configuration_never_silently_uses_mock (test_agent.AdapterTests.test_missing_api_configuration_never_silently_uses_mock) ... ok
+test_transport_payload_and_action_parsing_with_stubbed_http (test_agent.AdapterTests.test_transport_payload_and_action_parsing_with_stubbed_http) ... ok
+test_actual_disk_write_failure_does_not_claim_saved (test_agent.AgentTests.test_actual_disk_write_failure_does_not_claim_saved) ... ok
+test_budget_replan_preserves_observations_and_saves_new_estimate (test_agent.AgentTests.test_budget_replan_preserves_observations_and_saves_new_estimate) ... ok
+test_changed_rules_invalidate_estimate_before_save (test_agent.AgentTests.test_changed_rules_invalidate_estimate_before_save) ... ok
+test_failed_observation_and_successful_plan_reach_next_model_call (test_agent.AgentTests.test_failed_observation_and_successful_plan_reach_next_model_call) ... ok
+test_failed_request_also_reserves_request_id (test_agent.AgentTests.test_failed_request_also_reserves_request_id) ... ok
+test_invalid_constraints_do_not_enter_loop (test_agent.AgentTests.test_invalid_constraints_do_not_enter_loop) ... ok
+test_invalid_tool_parameters_are_observations_not_crashes (test_agent.AgentTests.test_invalid_tool_parameters_are_observations_not_crashes) ... ok
+test_missing_budget_or_deadline_never_calls_model_or_saves (test_agent.AgentTests.test_missing_budget_or_deadline_never_calls_model_or_saves) ... ok
+test_model_call_limit (test_agent.AgentTests.test_model_call_limit) ... ok
+test_model_cannot_declare_success_without_save (test_agent.AgentTests.test_model_cannot_declare_success_without_save) ... ok
+test_model_connection_failure_is_incomplete (test_agent.AgentTests.test_model_connection_failure_is_incomplete) ... ok
+test_no_feasible_plan_reports_constraint_gaps (test_agent.AgentTests.test_no_feasible_plan_reports_constraint_gaps) ... ok
+test_normal_saves_real_file_and_business_steps_remain_planned (test_agent.AgentTests.test_normal_saves_real_file_and_business_steps_remain_planned) ... ok
+test_plan_change_invalidates_previous_estimate (test_agent.AgentTests.test_plan_change_invalidates_previous_estimate) ... ok
+test_same_id_different_input_conflicts_and_preserves_old_file (test_agent.AgentTests.test_same_id_different_input_conflicts_and_preserves_old_file) ... ok
+test_same_request_reuses_file_without_model_or_tool_calls (test_agent.AgentTests.test_same_request_reuses_file_without_model_or_tool_calls) ... ok
+test_save_failure_is_not_success_and_later_rerun_can_save (test_agent.AgentTests.test_save_failure_is_not_success_and_later_rerun_can_save) ... ok
+test_save_recomputes_instead_of_trusting_estimate (test_agent.AgentTests.test_save_recomputes_instead_of_trusting_estimate) ... ok
+test_step_limit (test_agent.AgentTests.test_step_limit) ... ok
+test_time_overrun_cannot_save_even_when_budget_passes (test_agent.AgentTests.test_time_overrun_cannot_save_even_when_budget_passes) ... ok
+test_time_replan_is_reestimated (test_agent.AgentTests.test_time_replan_is_reestimated) ... ok
+test_tool_failure_retains_script_and_does_not_regenerate_it (test_agent.AgentTests.test_tool_failure_retains_script_and_does_not_regenerate_it) ... ok
+test_unknown_input_is_not_silently_discarded (test_agent.AgentTests.test_unknown_input_is_not_silently_discarded) ... ok
+
+----------------------------------------------------------------------
+Ran 26 tests in 0.211s
+
+OK

@@ -1,0 +1,386 @@
+{
+  "request": {
+    "request_id": "example-time",
+    "topic": "虚构新品推广",
+    "budget": 10.0,
+    "deadline_hours": 5.0
+  },
+  "status": "incomplete",
+  "reason": "离线预设：时间约束不满足，停止；当前方案费用缺口 0.0，时间缺口 60.0 分钟",
+  "steps": [
+    {
+      "step": 1,
+      "tool": "search_materials",
+      "arguments": {
+        "query": "新品"
+      },
+      "status": "succeeded",
+      "result": {
+        "materials": [
+          {
+            "id": "M01",
+            "title": "新品摄影素材",
+            "description": "适用于精制视频的虚构新品镜头",
+            "tags": [
+              "新品",
+              "春季新品",
+              "推广",
+              "视频"
+            ],
+            "facts": [
+              "虚构产品支持字幕编辑。",
+              "虚构产品支持视频裁剪。"
+            ],
+            "formats": [
+              "campaign_video"
+            ],
+            "cost_units": 6,
+            "preparation_minutes": 60
+          },
+          {
+            "id": "M02",
+            "title": "新品功能说明与图片",
+            "description": "适用于图文介绍的虚构产品资料",
+            "tags": [
+              "新品",
+              "春季新品",
+              "推广",
+              "图文"
+            ],
+            "facts": [
+              "虚构产品支持字幕编辑。"
+            ],
+            "formats": [
+              "social_post",
+              "quick_post"
+            ],
+            "cost_units": 2,
+            "preparation_minutes": 60
+          },
+          {
+            "id": "M03",
+            "title": "新品界面截图",
+            "description": "可复用的虚构界面截图，适用于简版图文",
+            "tags": [
+              "新品",
+              "春季新品",
+              "推广",
+              "简版",
+              "低成本"
+            ],
+            "facts": [
+              "虚构产品提供基础裁剪入口。"
+            ],
+            "formats": [
+              "quick_post"
+            ],
+            "cost_units": 1,
+            "preparation_minutes": 30
+          }
+        ],
+        "count": 3,
+        "note": "本地关键词检索；空结果不等于所有查询都无资料，可改写查询。"
+      }
+    },
+    {
+      "step": 2,
+      "tool": "generate_script",
+      "arguments": {
+        "material_ids": [
+          "M02"
+        ],
+        "format": "social_post"
+      },
+      "status": "succeeded",
+      "result": {
+        "plan": {
+          "topic": "虚构新品推广",
+          "constraints": {
+            "budget": 10.0,
+            "deadline_hours": 5.0
+          },
+          "material_ids": [
+            "M02"
+          ],
+          "materials": [
+            {
+              "id": "M02",
+              "title": "新品功能说明与图片",
+              "description": "适用于图文介绍的虚构产品资料",
+              "tags": [
+                "新品",
+                "春季新品",
+                "推广",
+                "图文"
+              ],
+              "facts": [
+                "虚构产品支持字幕编辑。"
+              ],
+              "formats": [
+                "social_post",
+                "quick_post"
+              ],
+              "cost_units": 2,
+              "preparation_minutes": 60
+            }
+          ],
+          "format": "social_post",
+          "script": {
+            "title": "虚构新品推广：新品功能介绍",
+            "sections": [
+              {
+                "text": "虚构产品支持字幕编辑。",
+                "source_material_id": "M02"
+              }
+            ],
+            "closing": "了解新品功能，选择适合自己的内容制作方式。",
+            "generation_mode": "local_synthetic_template"
+          },
+          "business_steps": [
+            {
+              "id": "prepare",
+              "name": "素材准备",
+              "depends_on": [],
+              "status": "planned",
+              "deliverable": "核对素材与来源",
+              "cost_units": 2,
+              "duration_minutes": 60
+            },
+            {
+              "id": "produce",
+              "name": "标准推广图文制作",
+              "depends_on": [
+                "prepare"
+              ],
+              "status": "planned",
+              "deliverable": "按脚本制作内容",
+              "cost_units": 5,
+              "duration_minutes": 240
+            },
+            {
+              "id": "review",
+              "name": "审核整理",
+              "depends_on": [
+                "produce"
+              ],
+              "status": "planned",
+              "deliverable": "可交付内容包",
+              "cost_units": 1,
+              "duration_minutes": 60
+            }
+          ]
+        },
+        "note": "生成的是规划草稿，业务步骤尚未实际执行。"
+      }
+    },
+    {
+      "step": 3,
+      "tool": "estimate_plan",
+      "arguments": {},
+      "status": "succeeded",
+      "result": {
+        "plan_version": 1,
+        "plan_fingerprint": "d85f39c52afa2b6a576e37108a73e6c944862884f89a83342e584d04ca5fd985",
+        "cost_units": 8,
+        "duration_minutes": 360,
+        "estimated_hours": 6.0,
+        "budget_ok": true,
+        "deadline_ok": false,
+        "constraints_met": false,
+        "budget_shortfall": 0.0,
+        "time_shortfall_minutes": 60.0,
+        "business_steps": [
+          {
+            "id": "prepare",
+            "name": "素材准备",
+            "depends_on": [],
+            "status": "planned",
+            "deliverable": "核对素材与来源",
+            "cost_units": 2,
+            "duration_minutes": 60
+          },
+          {
+            "id": "produce",
+            "name": "标准推广图文制作",
+            "depends_on": [
+              "prepare"
+            ],
+            "status": "planned",
+            "deliverable": "按脚本制作内容",
+            "cost_units": 5,
+            "duration_minutes": 240
+          },
+          {
+            "id": "review",
+            "name": "审核整理",
+            "depends_on": [
+              "produce"
+            ],
+            "status": "planned",
+            "deliverable": "可交付内容包",
+            "cost_units": 1,
+            "duration_minutes": 60
+          }
+        ]
+      }
+    },
+    {
+      "step": 4,
+      "tool": "save_plan",
+      "status": "failed",
+      "arguments": {},
+      "error": "拒绝保存：预算或时间未满足；费用缺口 0.0，时间缺口 60.0 分钟"
+    }
+  ],
+  "current_plan": {
+    "topic": "虚构新品推广",
+    "constraints": {
+      "budget": 10.0,
+      "deadline_hours": 5.0
+    },
+    "material_ids": [
+      "M02"
+    ],
+    "materials": [
+      {
+        "id": "M02",
+        "title": "新品功能说明与图片",
+        "description": "适用于图文介绍的虚构产品资料",
+        "tags": [
+          "新品",
+          "春季新品",
+          "推广",
+          "图文"
+        ],
+        "facts": [
+          "虚构产品支持字幕编辑。"
+        ],
+        "formats": [
+          "social_post",
+          "quick_post"
+        ],
+        "cost_units": 2,
+        "preparation_minutes": 60
+      }
+    ],
+    "format": "social_post",
+    "script": {
+      "title": "虚构新品推广：新品功能介绍",
+      "sections": [
+        {
+          "text": "虚构产品支持字幕编辑。",
+          "source_material_id": "M02"
+        }
+      ],
+      "closing": "了解新品功能，选择适合自己的内容制作方式。",
+      "generation_mode": "local_synthetic_template"
+    },
+    "business_steps": [
+      {
+        "id": "prepare",
+        "name": "素材准备",
+        "depends_on": [],
+        "status": "planned",
+        "deliverable": "核对素材与来源",
+        "cost_units": 2,
+        "duration_minutes": 60
+      },
+      {
+        "id": "produce",
+        "name": "标准推广图文制作",
+        "depends_on": [
+          "prepare"
+        ],
+        "status": "planned",
+        "deliverable": "按脚本制作内容",
+        "cost_units": 5,
+        "duration_minutes": 240
+      },
+      {
+        "id": "review",
+        "name": "审核整理",
+        "depends_on": [
+          "produce"
+        ],
+        "status": "planned",
+        "deliverable": "可交付内容包",
+        "cost_units": 1,
+        "duration_minutes": 60
+      }
+    ]
+  },
+  "plan_version": 1,
+  "latest_estimate": {
+    "plan_version": 1,
+    "plan_fingerprint": "d85f39c52afa2b6a576e37108a73e6c944862884f89a83342e584d04ca5fd985",
+    "cost_units": 8,
+    "duration_minutes": 360,
+    "estimated_hours": 6.0,
+    "budget_ok": true,
+    "deadline_ok": false,
+    "constraints_met": false,
+    "budget_shortfall": 0.0,
+    "time_shortfall_minutes": 60.0,
+    "business_steps": [
+      {
+        "id": "prepare",
+        "name": "素材准备",
+        "depends_on": [],
+        "status": "planned",
+        "deliverable": "核对素材与来源",
+        "cost_units": 2,
+        "duration_minutes": 60
+      },
+      {
+        "id": "produce",
+        "name": "标准推广图文制作",
+        "depends_on": [
+          "prepare"
+        ],
+        "status": "planned",
+        "deliverable": "按脚本制作内容",
+        "cost_units": 5,
+        "duration_minutes": 240
+      },
+      {
+        "id": "review",
+        "name": "审核整理",
+        "depends_on": [
+          "produce"
+        ],
+        "status": "planned",
+        "deliverable": "可交付内容包",
+        "cost_units": 1,
+        "duration_minutes": 60
+      }
+    ]
+  },
+  "errors": [
+    {
+      "step": 4,
+      "tool": "save_plan",
+      "status": "failed",
+      "arguments": {},
+      "error": "拒绝保存：预算或时间未满足；费用缺口 0.0，时间缺口 60.0 分钟"
+    }
+  ],
+  "execution_count": 5,
+  "model_calls": 5,
+  "tool_calls": 4,
+  "save_result": {
+    "saved": false,
+    "status": "failed",
+    "reason": "拒绝保存：预算或时间未满足；费用缺口 0.0，时间缺口 60.0 分钟"
+  },
+  "metadata": {
+    "mode": "mock",
+    "scenario": "time_exceeded",
+    "decision_evidence": "none_scripted_actions",
+    "started_at": "2026-10-30T09:32:03.474104+00:00",
+    "finished_at": "2026-10-30T09:32:03.480158+00:00",
+    "runtime_seconds": 0.0,
+    "max_steps": 12,
+    "max_model_calls": 12
+  },
+  "trace_file": "D:\\xiaoying\\examples\\offline-run\\time_exceeded.trace.json"
+}

@@ -1,0 +1,14 @@
+[examples] 执行 normal，预期状态 completed
+[examples] 执行 missing_budget，预期状态 needs_input
+[examples] 执行 missing_deadline，预期状态 needs_input
+[examples] 执行 budget_replan，预期状态 completed
+[examples] 执行 tool_failure，预期状态 completed
+[examples] 执行 duplicate，预期状态 completed
+[examples] 执行 conflict，预期状态 conflict
+[examples] 执行 infeasible，预期状态 incomplete
+[examples] 执行 time_exceeded，预期状态 incomplete
+[examples] 执行 time_replan，预期状态 completed
+[examples] 执行 save_failure，预期状态 incomplete
+[examples] 执行 step_limit，预期状态 incomplete
+[examples] 执行 model_limit，预期状态 incomplete
+已生成 13 组实际离线记录：D:\xiaoying\.venv\submission-check-20261031\project\examples\submission-repro

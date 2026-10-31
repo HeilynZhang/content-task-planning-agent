@@ -1,0 +1,114 @@
+{
+  "checked_at": "2026-10-31T11:23:10.324831+00:00",
+  "isolated_python": "D:\\xiaoying\\.venv\\submission-check-20261031\\Scripts\\python.exe",
+  "source_snapshot": "D:\\xiaoying\\.venv\\submission-check-20261031\\project",
+  "system_site_packages_disabled": true,
+  "snapshot_contains_env": false,
+  "source_snapshot_files": 163,
+  "known_key_matches": [],
+  "broken_local_document_links": [],
+  "external_document_links": [
+    "https://api-docs.deepseek.com/",
+    "https://api-docs.deepseek.com/guides/json_mode/",
+    "https://api-docs.deepseek.com/guides/thinking_mode/",
+    "https://docs.langchain.com/oss/python/langgraph/graph-api",
+    "https://docs.langchain.com/oss/python/langgraph/persistence",
+    "https://docs.langchain.com/oss/python/langgraph/use-graph-api"
+  ],
+  "git_repository_present": false,
+  "commands": [
+    {
+      "name": "installed-packages",
+      "arguments": [
+        "-m",
+        "pip",
+        "list",
+        "--format=json"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "passed": true
+    },
+    {
+      "name": "clean-tests",
+      "arguments": [
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "passed": true
+    },
+    {
+      "name": "readme-mock-cli",
+      "arguments": [
+        "-m",
+        "src.cli",
+        "--mode",
+        "mock",
+        "--topic",
+        "虚构新品推广",
+        "--budget",
+        "10",
+        "--deadline-hours",
+        "8",
+        "--request-id",
+        "demo-001",
+        "--trace-file",
+        "data/runtime/demo.trace.json",
+        "--output-file",
+        "data/runtime/demo.output.json"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "passed": true
+    },
+    {
+      "name": "clean-cli-examples",
+      "arguments": [
+        "-m",
+        "examples.generate",
+        "--output-dir",
+        "examples/submission-repro"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "passed": true
+    },
+    {
+      "name": "existing-real-evidence",
+      "arguments": [
+        "-m",
+        "examples.verify_live",
+        "--run-dir",
+        "examples/deepseek-run"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "passed": true
+    }
+  ],
+  "new_llm_api_calls": 0,
+  "readme_cli_actual_save_verified": true,
+  "regenerated_cli_cases": 13,
+  "tests_run": 46,
+  "automated_checks_passed": true,
+  "final_document_links_checked": 53,
+  "final_broken_local_links": [],
+  "external_documents_opened_successfully": [
+    "https://api-docs.deepseek.com/",
+    "https://api-docs.deepseek.com/guides/json_mode/",
+    "https://api-docs.deepseek.com/guides/thinking_mode/",
+    "https://docs.langchain.com/oss/python/langgraph/graph-api",
+    "https://docs.langchain.com/oss/python/langgraph/persistence",
+    "https://docs.langchain.com/oss/python/langgraph/use-graph-api"
+  ],
+  "installation_status": "passed after ASCII comment fix and approved network retry",
+  "candidate_reported_effort_hours_approx": 3,
+  "candidate_reported_contribution": "personally checked accuracy of key nodes",
+  "git_delivery_status": "pending repository creation, final commit SHA, remote URL and reviewer access"
+}

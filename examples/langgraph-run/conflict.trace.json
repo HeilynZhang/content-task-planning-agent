@@ -1,0 +1,41 @@
+{
+  "metadata": {
+    "mode": "mock",
+    "scenario": "normal",
+    "decision_evidence": "none_scripted_actions",
+    "started_at": "2026-10-30T10:25:11.517625+00:00",
+    "finished_at": "2026-10-30T10:25:11.524080+00:00",
+    "runtime_seconds": 0.0,
+    "max_steps": 12,
+    "max_model_calls": 12,
+    "engine": "langgraph",
+    "langgraph_version": "1.2.9",
+    "run_id": "d3588ddc-4885-4447-81fe-9b0854f5cfbe",
+    "checkpointer": "InMemorySaver",
+    "checkpoint_scope": "process_memory_only",
+    "resume_supported": false
+  },
+  "request": {
+    "topic": "虚构新品推广",
+    "budget": 11,
+    "deadline_hours": 8,
+    "request_id": "example-normal"
+  },
+  "events": [
+    {
+      "timestamp": "2026-10-30T10:25:11.523078+00:00",
+      "event": "request_conflict",
+      "error": "同一 request_id 已绑定不同输入；请使用新的请求 ID"
+    }
+  ],
+  "node_events": [
+    {
+      "node": "prepare",
+      "timestamp": "2026-10-30T10:25:11.523078+00:00"
+    },
+    {
+      "node": "finalize",
+      "timestamp": "2026-10-30T10:25:11.525084+00:00"
+    }
+  ]
+}

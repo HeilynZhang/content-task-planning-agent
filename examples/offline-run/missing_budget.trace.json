@@ -1,0 +1,26 @@
+{
+  "metadata": {
+    "mode": "mock",
+    "scenario": "normal",
+    "decision_evidence": "none_scripted_actions",
+    "started_at": "2026-10-30T09:32:02.011469+00:00",
+    "finished_at": "2026-10-30T09:32:02.012740+00:00",
+    "runtime_seconds": 0.0,
+    "max_steps": 12,
+    "max_model_calls": 12
+  },
+  "request": {
+    "topic": "虚构新品推广",
+    "deadline_hours": 8,
+    "request_id": "missing-budget"
+  },
+  "events": [
+    {
+      "timestamp": "2026-10-30T09:32:02.011469+00:00",
+      "event": "input_validation",
+      "issues": [
+        "请提供有效 budget（预算非负，截止小时数为正）"
+      ]
+    }
+  ]
+}

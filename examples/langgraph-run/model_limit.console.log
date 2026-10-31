@@ -1,0 +1,8 @@
+图节点：prepare
+图节点：decision
+模型调用 1/1，等待下一步动作…
+图节点：execute_tool
+步骤 1/12：执行 search_materials
+search_materials 成功
+图节点：decision
+图节点：finalize

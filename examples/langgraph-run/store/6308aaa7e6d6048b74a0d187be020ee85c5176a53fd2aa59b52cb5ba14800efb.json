@@ -1,0 +1,10 @@
+{
+  "request": {
+    "request_id": "example-infeasible",
+    "topic": "虚构新品推广",
+    "budget": 0.0,
+    "deadline_hours": 0.5
+  },
+  "request_hash": "0e4e6192a104cdef379237148a9fb43760bb28ba3ee24ea7f82215261cc8178f",
+  "saved_plan": null
+}

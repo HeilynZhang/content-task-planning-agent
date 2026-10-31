@@ -1,0 +1,8 @@
+{
+  "synthetic": true,
+  "materials": [
+    {"id":"M01","title":"新品摄影素材","description":"适用于精制视频的虚构新品镜头","tags":["新品","春季新品","推广","视频"],"facts":["虚构产品支持字幕编辑。","虚构产品支持视频裁剪。"],"formats":["campaign_video"],"cost_units":6,"preparation_minutes":60},
+    {"id":"M02","title":"新品功能说明与图片","description":"适用于图文介绍的虚构产品资料","tags":["新品","春季新品","推广","图文"],"facts":["虚构产品支持字幕编辑。"],"formats":["social_post","quick_post"],"cost_units":2,"preparation_minutes":60},
+    {"id":"M03","title":"新品界面截图","description":"可复用的虚构界面截图，适用于简版图文","tags":["新品","春季新品","推广","简版","低成本"],"facts":["虚构产品提供基础裁剪入口。"],"formats":["quick_post"],"cost_units":1,"preparation_minutes":30}
+  ]
+}

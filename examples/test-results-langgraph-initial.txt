@@ -1,0 +1,58 @@
+Executed at 2026-10-30T10:24:24.578339+00:00
+Stage: initial LangGraph regression; includes one snapshot-selection assertion failure
+
+test_invalid_api_response_is_not_treated_as_an_action (test_agent.AdapterTests.test_invalid_api_response_is_not_treated_as_an_action) ... ok
+test_missing_api_configuration_never_silently_uses_mock (test_agent.AdapterTests.test_missing_api_configuration_never_silently_uses_mock) ... ok
+test_transport_payload_and_action_parsing_with_stubbed_http (test_agent.AdapterTests.test_transport_payload_and_action_parsing_with_stubbed_http) ... ok
+test_actual_disk_write_failure_does_not_claim_saved (test_agent.AgentTests.test_actual_disk_write_failure_does_not_claim_saved) ... ok
+test_budget_replan_preserves_observations_and_saves_new_estimate (test_agent.AgentTests.test_budget_replan_preserves_observations_and_saves_new_estimate) ... ok
+test_changed_rules_invalidate_estimate_before_save (test_agent.AgentTests.test_changed_rules_invalidate_estimate_before_save) ... ok
+test_failed_observation_and_successful_plan_reach_next_model_call (test_agent.AgentTests.test_failed_observation_and_successful_plan_reach_next_model_call) ... ok
+test_failed_request_also_reserves_request_id (test_agent.AgentTests.test_failed_request_also_reserves_request_id) ... ok
+test_invalid_constraints_do_not_enter_loop (test_agent.AgentTests.test_invalid_constraints_do_not_enter_loop) ... ok
+test_invalid_tool_parameters_are_observations_not_crashes (test_agent.AgentTests.test_invalid_tool_parameters_are_observations_not_crashes) ... ok
+test_missing_budget_or_deadline_never_calls_model_or_saves (test_agent.AgentTests.test_missing_budget_or_deadline_never_calls_model_or_saves) ... ok
+test_model_call_limit (test_agent.AgentTests.test_model_call_limit) ... ok
+test_model_cannot_declare_success_without_save (test_agent.AgentTests.test_model_cannot_declare_success_without_save) ... ok
+test_model_connection_failure_is_incomplete (test_agent.AgentTests.test_model_connection_failure_is_incomplete) ... ok
+test_no_feasible_plan_reports_constraint_gaps (test_agent.AgentTests.test_no_feasible_plan_reports_constraint_gaps) ... ok
+test_normal_saves_real_file_and_business_steps_remain_planned (test_agent.AgentTests.test_normal_saves_real_file_and_business_steps_remain_planned) ... ok
+test_plan_change_invalidates_previous_estimate (test_agent.AgentTests.test_plan_change_invalidates_previous_estimate) ... ok
+test_same_id_different_input_conflicts_and_preserves_old_file (test_agent.AgentTests.test_same_id_different_input_conflicts_and_preserves_old_file) ... ok
+test_same_request_reuses_file_without_model_or_tool_calls (test_agent.AgentTests.test_same_request_reuses_file_without_model_or_tool_calls) ... ok
+test_save_failure_is_not_success_and_later_rerun_can_save (test_agent.AgentTests.test_save_failure_is_not_success_and_later_rerun_can_save) ... ok
+test_save_recomputes_instead_of_trusting_estimate (test_agent.AgentTests.test_save_recomputes_instead_of_trusting_estimate) ... ok
+test_step_limit (test_agent.AgentTests.test_step_limit) ... ok
+test_time_overrun_cannot_save_even_when_budget_passes (test_agent.AgentTests.test_time_overrun_cannot_save_even_when_budget_passes) ... ok
+test_time_replan_is_reestimated (test_agent.AgentTests.test_time_replan_is_reestimated) ... ok
+test_tool_failure_retains_script_and_does_not_regenerate_it (test_agent.AgentTests.test_tool_failure_retains_script_and_does_not_regenerate_it) ... ok
+test_unknown_input_is_not_silently_discarded (test_agent.AgentTests.test_unknown_input_is_not_silently_discarded) ... ok
+test_budget_observation_routes_back_to_model_without_selecting_plan (test_graph.GraphTests.test_budget_observation_routes_back_to_model_without_selecting_plan) ... FAIL
+test_compiled_stategraph_has_expected_conditional_edges (test_graph.GraphTests.test_compiled_stategraph_has_expected_conditional_edges) ... ok
+test_failed_tool_snapshot_preserves_plan_and_routes_to_decision (test_graph.GraphTests.test_failed_tool_snapshot_preserves_plan_and_routes_to_decision) ... ok
+test_final_checkpoint_and_history_are_real_snapshots (test_graph.GraphTests.test_final_checkpoint_and_history_are_real_snapshots) ... ok
+test_invalid_action_self_loop_is_bounded_and_not_duplicated (test_graph.GraphTests.test_invalid_action_self_loop_is_bounded_and_not_duplicated) ... ok
+test_last_allowed_action_can_save_before_limit (test_graph.GraphTests.test_last_allowed_action_can_save_before_limit) ... ok
+test_missing_input_routes_straight_to_finalize (test_graph.GraphTests.test_missing_input_routes_straight_to_finalize) ... ok
+test_model_stop_routes_to_finalize_without_tools (test_graph.GraphTests.test_model_stop_routes_to_finalize_without_tools) ... ok
+test_new_memory_saver_has_no_prior_checkpoints (test_graph.GraphTests.test_new_memory_saver_has_no_prior_checkpoints) ... ok
+test_normal_node_sequence_and_append_reducers (test_graph.GraphTests.test_normal_node_sequence_and_append_reducers) ... ok
+test_plan_change_checkpoint_has_no_stale_estimate (test_graph.GraphTests.test_plan_change_checkpoint_has_no_stale_estimate) ... ok
+test_recursion_safety_returns_incomplete_with_last_plan (test_graph.GraphTests.test_recursion_safety_returns_incomplete_with_last_plan) ... ok
+test_run_ids_isolate_checkpoints_and_request_id_still_controls_reuse (test_graph.GraphTests.test_run_ids_isolate_checkpoints_and_request_id_still_controls_reuse) ... ok
+
+======================================================================
+FAIL: test_budget_observation_routes_back_to_model_without_selecting_plan (test_graph.GraphTests.test_budget_observation_routes_back_to_model_without_selecting_plan)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\xiaoying\tests\test_graph.py", line 69, in test_budget_observation_routes_back_to_model_without_selecting_plan
+    self.assertEqual(over_budget[0].values["last_observation"]["tool"], "estimate_plan")
+AssertionError: 'search_materials' != 'estimate_plan'
+- search_materials
++ estimate_plan
+
+
+----------------------------------------------------------------------
+Ran 39 tests in 1.218s
+
+FAILED (failures=1)

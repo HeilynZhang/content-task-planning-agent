@@ -1,0 +1,120 @@
+{
+  "metadata": {
+    "mode": "mock",
+    "scenario": "normal",
+    "decision_evidence": "none_scripted_actions",
+    "started_at": "2026-10-30T09:32:04.348934+00:00",
+    "finished_at": "2026-10-30T09:32:04.350996+00:00",
+    "runtime_seconds": 0.0,
+    "max_steps": 12,
+    "max_model_calls": 1
+  },
+  "request": {
+    "topic": "虚构新品推广",
+    "budget": 10,
+    "deadline_hours": 8,
+    "request_id": "example-model-limit"
+  },
+  "events": [
+    {
+      "timestamp": "2026-10-30T09:32:04.350493+00:00",
+      "step": 1,
+      "event": "model_action",
+      "action": {
+        "type": "tool",
+        "name": "search_materials",
+        "arguments": {
+          "query": "新品"
+        },
+        "reason": "离线预设：查询素材"
+      },
+      "observation": {
+        "step": 1,
+        "tool": "search_materials",
+        "arguments": {
+          "query": "新品"
+        },
+        "status": "succeeded",
+        "result": {
+          "materials": [
+            {
+              "id": "M01",
+              "title": "新品摄影素材",
+              "description": "适用于精制视频的虚构新品镜头",
+              "tags": [
+                "新品",
+                "春季新品",
+                "推广",
+                "视频"
+              ],
+              "facts": [
+                "虚构产品支持字幕编辑。",
+                "虚构产品支持视频裁剪。"
+              ],
+              "formats": [
+                "campaign_video"
+              ],
+              "cost_units": 6,
+              "preparation_minutes": 60
+            },
+            {
+              "id": "M02",
+              "title": "新品功能说明与图片",
+              "description": "适用于图文介绍的虚构产品资料",
+              "tags": [
+                "新品",
+                "春季新品",
+                "推广",
+                "图文"
+              ],
+              "facts": [
+                "虚构产品支持字幕编辑。"
+              ],
+              "formats": [
+                "social_post",
+                "quick_post"
+              ],
+              "cost_units": 2,
+              "preparation_minutes": 60
+            },
+            {
+              "id": "M03",
+              "title": "新品界面截图",
+              "description": "可复用的虚构界面截图，适用于简版图文",
+              "tags": [
+                "新品",
+                "春季新品",
+                "推广",
+                "简版",
+                "低成本"
+              ],
+              "facts": [
+                "虚构产品提供基础裁剪入口。"
+              ],
+              "formats": [
+                "quick_post"
+              ],
+              "cost_units": 1,
+              "preparation_minutes": 30
+            }
+          ],
+          "count": 3,
+          "note": "本地关键词检索；空结果不等于所有查询都无资料，可改写查询。"
+        }
+      },
+      "result_summary": {
+        "count": 3,
+        "material_ids": [
+          "M01",
+          "M02",
+          "M03"
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-10-30T09:32:04.350996+00:00",
+      "event": "limit_reached",
+      "reason": "达到模型调用次数上限"
+    }
+  ]
+}

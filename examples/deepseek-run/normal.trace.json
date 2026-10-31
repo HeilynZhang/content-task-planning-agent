@@ -1,0 +1,808 @@
+{
+  "metadata": {
+    "mode": "llm",
+    "model": "deepseek-flash",
+    "api_calls": 8,
+    "thinking": "disabled",
+    "response_metadata": [
+      {
+        "id": "8e6016d8-94a6-410a-9b95-b5f1a53564b7",
+        "model": "deepseek-flash",
+        "finish_reason": "stop"
+      },
+      {
+        "id": "3dcefad0-accc-4d47-b897-0e969c7f5862",
+        "model": "deepseek-flash",
+        "finish_reason": "stop"
+      },
+      {
+        "id": "34d62ea2-22ba-419e-a85c-816e11f148ab",
+        "model": "deepseek-flash",
+        "finish_reason": "stop"
+      },
+      {
+        "id": "e1e94c1a-8280-4132-92cd-75cd105ddf66",
+        "model": "deepseek-flash",
+        "finish_reason": "stop"
+      },
+      {
+        "id": "03052436-93d5-49d4-b668-7413a8ce1fe3",
+        "model": "deepseek-flash",
+        "finish_reason": "stop"
+      },
+      {
+        "id": "d05c3041-2e15-4e84-8bf6-ea1eca24a1a4",
+        "model": "deepseek-flash",
+        "finish_reason": "stop"
+      },
+      {
+        "id": "a46f714d-c8d6-485f-ab20-30e45f3ee4c4",
+        "model": "deepseek-flash",
+        "finish_reason": "stop"
+      },
+      {
+        "id": "d9f40727-893d-46a5-a115-f0e2ec9da58d",
+        "model": "deepseek-flash",
+        "finish_reason": "stop"
+      }
+    ],
+    "provider_usage": [
+      {
+        "prompt_tokens": 692,
+        "completion_tokens": 39,
+        "total_tokens": 731,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "prompt_cache_hit_tokens": 0,
+        "prompt_cache_miss_tokens": 692
+      },
+      {
+        "prompt_tokens": 1014,
+        "completion_tokens": 92,
+        "total_tokens": 1106,
+        "prompt_tokens_details": {
+          "cached_tokens": 128
+        },
+        "prompt_cache_hit_tokens": 128,
+        "prompt_cache_miss_tokens": 886
+      },
+      {
+        "prompt_tokens": 1010,
+        "completion_tokens": 51,
+        "total_tokens": 1061,
+        "prompt_tokens_details": {
+          "cached_tokens": 256
+        },
+        "prompt_cache_hit_tokens": 256,
+        "prompt_cache_miss_tokens": 754
+      },
+      {
+        "prompt_tokens": 2299,
+        "completion_tokens": 44,
+        "total_tokens": 2343,
+        "prompt_tokens_details": {
+          "cached_tokens": 384
+        },
+        "prompt_cache_hit_tokens": 384,
+        "prompt_cache_miss_tokens": 1915
+      },
+      {
+        "prompt_tokens": 2793,
+        "completion_tokens": 56,
+        "total_tokens": 2849,
+        "prompt_tokens_details": {
+          "cached_tokens": 896
+        },
+        "prompt_cache_hit_tokens": 896,
+        "prompt_cache_miss_tokens": 1897
+      },
+      {
+        "prompt_tokens": 2978,
+        "completion_tokens": 59,
+        "total_tokens": 3037,
+        "prompt_tokens_details": {
+          "cached_tokens": 1152
+        },
+        "prompt_cache_hit_tokens": 1152,
+        "prompt_cache_miss_tokens": 1826
+      },
+      {
+        "prompt_tokens": 3281,
+        "completion_tokens": 39,
+        "total_tokens": 3320,
+        "prompt_tokens_details": {
+          "cached_tokens": 1408
+        },
+        "prompt_cache_hit_tokens": 1408,
+        "prompt_cache_miss_tokens": 1873
+      },
+      {
+        "prompt_tokens": 3789,
+        "completion_tokens": 51,
+        "total_tokens": 3840,
+        "prompt_tokens_details": {
+          "cached_tokens": 1920
+        },
+        "prompt_cache_hit_tokens": 1920,
+        "prompt_cache_miss_tokens": 1869
+      }
+    ],
+    "decision_evidence": "real_api_when_called",
+    "started_at": "2026-10-30T12:13:26.471460+00:00",
+    "finished_at": "2026-10-30T12:13:37.467994+00:00",
+    "runtime_seconds": 11.0,
+    "max_steps": 8,
+    "max_model_calls": 8,
+    "engine": "langgraph",
+    "langgraph_version": "1.2.9",
+    "run_id": "9d9d864b-1fd1-4582-9945-486ccf0296ba",
+    "checkpointer": "InMemorySaver",
+    "checkpoint_scope": "process_memory_only",
+    "resume_supported": false
+  },
+  "request": {
+    "request_id": "deepseek-normal-20261030-01",
+    "topic": "虚构新品推广",
+    "budget": 10,
+    "deadline_hours": 8
+  },
+  "events": [
+    {
+      "timestamp": "2026-10-30T12:13:26.489427+00:00",
+      "step": 1,
+      "event": "model_action",
+      "decision_node": "decision",
+      "action": {
+        "type": "tool",
+        "name": "search_materials",
+        "arguments": {
+          "query": "虚构新品推广 素材"
+        },
+        "reason": "先检索可用于新品推广的素材，再据此制定内容方案。"
+      },
+      "tool_node": "execute_tool",
+      "observation": {
+        "step": 1,
+        "tool": "search_materials",
+        "arguments": {
+          "query": "虚构新品推广 素材"
+        },
+        "status": "succeeded",
+        "result": {
+          "materials": [
+            {
+              "id": "M01",
+              "title": "新品摄影素材",
+              "description": "适用于精制视频的虚构新品镜头",
+              "tags": [
+                "新品",
+                "春季新品",
+                "推广",
+                "视频"
+              ],
+              "facts": [
+                "虚构产品支持字幕编辑。",
+                "虚构产品支持视频裁剪。"
+              ],
+              "formats": [
+                "campaign_video"
+              ],
+              "cost_units": 6,
+              "preparation_minutes": 60
+            }
+          ],
+          "count": 1,
+          "note": "本地关键词检索；空结果不等于所有查询都无资料，可改写查询。"
+        }
+      },
+      "result_summary": {
+        "count": 1,
+        "material_ids": [
+          "M01"
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-10-30T12:13:27.876874+00:00",
+      "step": 2,
+      "event": "model_action",
+      "decision_node": "decision",
+      "action": {
+        "type": "tool",
+        "name": "generate_script",
+        "arguments": {
+          "material_ids": [
+            "M01"
+          ],
+          "format": "quick_post"
+        },
+        "reason": "预算10、时限8小时；campaign_video 需5+1=6单位、360分钟，使用 M01 会再叠加6单位准备成本超预算，故先用同一素材生成简版图文脚本（2+1=3单位、120分钟），确保双约束可行。"
+      },
+      "tool_node": "execute_tool",
+      "observation": {
+        "step": 2,
+        "tool": "generate_script",
+        "arguments": {
+          "material_ids": [
+            "M01"
+          ],
+          "format": "quick_post"
+        },
+        "status": "failed",
+        "error": "素材 M01 不支持内容形式 quick_post"
+      },
+      "result_summary": {
+        "status": "failed",
+        "error": "素材 M01 不支持内容形式 quick_post"
+      }
+    },
+    {
+      "timestamp": "2026-10-30T12:13:29.637521+00:00",
+      "step": 3,
+      "event": "model_action",
+      "decision_node": "decision",
+      "action": {
+        "type": "tool",
+        "name": "generate_script",
+        "arguments": {
+          "material_ids": [
+            "M01"
+          ],
+          "format": "campaign_video"
+        },
+        "reason": "素材 M01 支持的内容形式为 campaign_video，改用该形式重新生成脚本。"
+      },
+      "tool_node": "execute_tool",
+      "observation": {
+        "step": 3,
+        "tool": "generate_script",
+        "arguments": {
+          "material_ids": [
+            "M01"
+          ],
+          "format": "campaign_video"
+        },
+        "status": "succeeded",
+        "result": {
+          "plan": {
+            "topic": "虚构新品推广",
+            "constraints": {
+              "budget": 10.0,
+              "deadline_hours": 8.0
+            },
+            "material_ids": [
+              "M01"
+            ],
+            "materials": [
+              {
+                "id": "M01",
+                "title": "新品摄影素材",
+                "description": "适用于精制视频的虚构新品镜头",
+                "tags": [
+                  "新品",
+                  "春季新品",
+                  "推广",
+                  "视频"
+                ],
+                "facts": [
+                  "虚构产品支持字幕编辑。",
+                  "虚构产品支持视频裁剪。"
+                ],
+                "formats": [
+                  "campaign_video"
+                ],
+                "cost_units": 6,
+                "preparation_minutes": 60
+              }
+            ],
+            "format": "campaign_video",
+            "script": {
+              "title": "虚构新品推广：新品功能介绍",
+              "sections": [
+                {
+                  "text": "虚构产品支持字幕编辑。",
+                  "source_material_id": "M01"
+                },
+                {
+                  "text": "虚构产品支持视频裁剪。",
+                  "source_material_id": "M01"
+                }
+              ],
+              "closing": "了解新品功能，选择适合自己的内容制作方式。",
+              "generation_mode": "local_synthetic_template"
+            },
+            "business_steps": [
+              {
+                "id": "prepare",
+                "name": "素材准备",
+                "depends_on": [],
+                "status": "planned",
+                "deliverable": "核对素材与来源",
+                "cost_units": 6,
+                "duration_minutes": 60
+              },
+              {
+                "id": "produce",
+                "name": "精制短视频制作",
+                "depends_on": [
+                  "prepare"
+                ],
+                "status": "planned",
+                "deliverable": "按脚本制作内容",
+                "cost_units": 5,
+                "duration_minutes": 300
+              },
+              {
+                "id": "review",
+                "name": "审核整理",
+                "depends_on": [
+                  "produce"
+                ],
+                "status": "planned",
+                "deliverable": "可交付内容包",
+                "cost_units": 1,
+                "duration_minutes": 60
+              }
+            ]
+          },
+          "note": "生成的是规划草稿，业务步骤尚未实际执行。"
+        }
+      },
+      "result_summary": {
+        "plan_version": 1,
+        "material_ids": [
+          "M01"
+        ],
+        "format": "campaign_video",
+        "estimate_invalidated": true
+      }
+    },
+    {
+      "timestamp": "2026-10-30T12:13:31.168216+00:00",
+      "step": 4,
+      "event": "model_action",
+      "decision_node": "decision",
+      "action": {
+        "type": "tool",
+        "name": "estimate_plan",
+        "arguments": {},
+        "reason": "当前方案总费用为素材6+制作5+审核1=12，超过预算10，需先估算确认缺口。"
+      },
+      "tool_node": "execute_tool",
+      "observation": {
+        "step": 4,
+        "tool": "estimate_plan",
+        "arguments": {},
+        "status": "succeeded",
+        "result": {
+          "plan_version": 1,
+          "plan_fingerprint": "1596c11c2f997c16691ae6c1edf0ac94c4a06ca27b4a9f99f41b2d96b608699a",
+          "cost_units": 12,
+          "duration_minutes": 420,
+          "estimated_hours": 7.0,
+          "budget_ok": false,
+          "deadline_ok": true,
+          "constraints_met": false,
+          "budget_shortfall": 2.0,
+          "time_shortfall_minutes": 0.0,
+          "business_steps": [
+            {
+              "id": "prepare",
+              "name": "素材准备",
+              "depends_on": [],
+              "status": "planned",
+              "deliverable": "核对素材与来源",
+              "cost_units": 6,
+              "duration_minutes": 60
+            },
+            {
+              "id": "produce",
+              "name": "精制短视频制作",
+              "depends_on": [
+                "prepare"
+              ],
+              "status": "planned",
+              "deliverable": "按脚本制作内容",
+              "cost_units": 5,
+              "duration_minutes": 300
+            },
+            {
+              "id": "review",
+              "name": "审核整理",
+              "depends_on": [
+                "produce"
+              ],
+              "status": "planned",
+              "deliverable": "可交付内容包",
+              "cost_units": 1,
+              "duration_minutes": 60
+            }
+          ]
+        }
+      },
+      "result_summary": {
+        "cost_units": 12,
+        "duration_minutes": 420,
+        "budget_ok": false,
+        "deadline_ok": true,
+        "budget_shortfall": 2.0,
+        "time_shortfall_minutes": 0.0
+      }
+    },
+    {
+      "timestamp": "2026-10-30T12:13:32.279215+00:00",
+      "step": 5,
+      "event": "model_action",
+      "decision_node": "decision",
+      "action": {
+        "type": "tool",
+        "name": "search_materials",
+        "arguments": {
+          "query": "虚构新品 低成本 图文素材",
+          "exclude_ids": []
+        },
+        "reason": "当前方案预算超出 2.0，改为查找成本更低的替代素材，以降低素材准备费用。"
+      },
+      "tool_node": "execute_tool",
+      "observation": {
+        "step": 5,
+        "tool": "search_materials",
+        "arguments": {
+          "query": "虚构新品 低成本 图文素材",
+          "exclude_ids": []
+        },
+        "status": "succeeded",
+        "result": {
+          "materials": [
+            {
+              "id": "M01",
+              "title": "新品摄影素材",
+              "description": "适用于精制视频的虚构新品镜头",
+              "tags": [
+                "新品",
+                "春季新品",
+                "推广",
+                "视频"
+              ],
+              "facts": [
+                "虚构产品支持字幕编辑。",
+                "虚构产品支持视频裁剪。"
+              ],
+              "formats": [
+                "campaign_video"
+              ],
+              "cost_units": 6,
+              "preparation_minutes": 60
+            },
+            {
+              "id": "M03",
+              "title": "新品界面截图",
+              "description": "可复用的虚构界面截图，适用于简版图文",
+              "tags": [
+                "新品",
+                "春季新品",
+                "推广",
+                "简版",
+                "低成本"
+              ],
+              "facts": [
+                "虚构产品提供基础裁剪入口。"
+              ],
+              "formats": [
+                "quick_post"
+              ],
+              "cost_units": 1,
+              "preparation_minutes": 30
+            }
+          ],
+          "count": 2,
+          "note": "本地关键词检索；空结果不等于所有查询都无资料，可改写查询。"
+        }
+      },
+      "result_summary": {
+        "count": 2,
+        "material_ids": [
+          "M01",
+          "M03"
+        ]
+      }
+    },
+    {
+      "timestamp": "2026-10-30T12:13:33.593406+00:00",
+      "step": 6,
+      "event": "model_action",
+      "decision_node": "decision",
+      "action": {
+        "type": "tool",
+        "name": "generate_script",
+        "arguments": {
+          "material_ids": [
+            "M03"
+          ],
+          "format": "quick_post"
+        },
+        "reason": "改用低成本的简版图文形式（M03 支持 quick_post），以将总费用控制在预算内"
+      },
+      "tool_node": "execute_tool",
+      "observation": {
+        "step": 6,
+        "tool": "generate_script",
+        "arguments": {
+          "material_ids": [
+            "M03"
+          ],
+          "format": "quick_post"
+        },
+        "status": "succeeded",
+        "result": {
+          "plan": {
+            "topic": "虚构新品推广",
+            "constraints": {
+              "budget": 10.0,
+              "deadline_hours": 8.0
+            },
+            "material_ids": [
+              "M03"
+            ],
+            "materials": [
+              {
+                "id": "M03",
+                "title": "新品界面截图",
+                "description": "可复用的虚构界面截图，适用于简版图文",
+                "tags": [
+                  "新品",
+                  "春季新品",
+                  "推广",
+                  "简版",
+                  "低成本"
+                ],
+                "facts": [
+                  "虚构产品提供基础裁剪入口。"
+                ],
+                "formats": [
+                  "quick_post"
+                ],
+                "cost_units": 1,
+                "preparation_minutes": 30
+              }
+            ],
+            "format": "quick_post",
+            "script": {
+              "title": "虚构新品推广：新品功能介绍",
+              "sections": [
+                {
+                  "text": "虚构产品提供基础裁剪入口。",
+                  "source_material_id": "M03"
+                }
+              ],
+              "closing": "了解新品功能，选择适合自己的内容制作方式。",
+              "generation_mode": "local_synthetic_template"
+            },
+            "business_steps": [
+              {
+                "id": "prepare",
+                "name": "素材准备",
+                "depends_on": [],
+                "status": "planned",
+                "deliverable": "核对素材与来源",
+                "cost_units": 1,
+                "duration_minutes": 30
+              },
+              {
+                "id": "produce",
+                "name": "简版图文制作",
+                "depends_on": [
+                  "prepare"
+                ],
+                "status": "planned",
+                "deliverable": "按脚本制作内容",
+                "cost_units": 2,
+                "duration_minutes": 60
+              },
+              {
+                "id": "review",
+                "name": "审核整理",
+                "depends_on": [
+                  "produce"
+                ],
+                "status": "planned",
+                "deliverable": "可交付内容包",
+                "cost_units": 1,
+                "duration_minutes": 60
+              }
+            ]
+          },
+          "note": "生成的是规划草稿，业务步骤尚未实际执行。"
+        }
+      },
+      "result_summary": {
+        "plan_version": 2,
+        "material_ids": [
+          "M03"
+        ],
+        "format": "quick_post",
+        "estimate_invalidated": true
+      }
+    },
+    {
+      "timestamp": "2026-10-30T12:13:35.262180+00:00",
+      "step": 7,
+      "event": "model_action",
+      "decision_node": "decision",
+      "action": {
+        "type": "tool",
+        "name": "estimate_plan",
+        "arguments": {},
+        "reason": "新方案改用低成本简版图文素材 M03，修改后必须重新估算预算与截止时间。"
+      },
+      "tool_node": "execute_tool",
+      "observation": {
+        "step": 7,
+        "tool": "estimate_plan",
+        "arguments": {},
+        "status": "succeeded",
+        "result": {
+          "plan_version": 2,
+          "plan_fingerprint": "3de958a51e54f7dfc221ec8af411f27ac31dc0359e0a55e3ada6fd7ced34b0ee",
+          "cost_units": 4,
+          "duration_minutes": 150,
+          "estimated_hours": 2.5,
+          "budget_ok": true,
+          "deadline_ok": true,
+          "constraints_met": true,
+          "budget_shortfall": 0.0,
+          "time_shortfall_minutes": 0.0,
+          "business_steps": [
+            {
+              "id": "prepare",
+              "name": "素材准备",
+              "depends_on": [],
+              "status": "planned",
+              "deliverable": "核对素材与来源",
+              "cost_units": 1,
+              "duration_minutes": 30
+            },
+            {
+              "id": "produce",
+              "name": "简版图文制作",
+              "depends_on": [
+                "prepare"
+              ],
+              "status": "planned",
+              "deliverable": "按脚本制作内容",
+              "cost_units": 2,
+              "duration_minutes": 60
+            },
+            {
+              "id": "review",
+              "name": "审核整理",
+              "depends_on": [
+                "produce"
+              ],
+              "status": "planned",
+              "deliverable": "可交付内容包",
+              "cost_units": 1,
+              "duration_minutes": 60
+            }
+          ]
+        }
+      },
+      "result_summary": {
+        "cost_units": 4,
+        "duration_minutes": 150,
+        "budget_ok": true,
+        "deadline_ok": true,
+        "budget_shortfall": 0.0,
+        "time_shortfall_minutes": 0.0
+      }
+    },
+    {
+      "timestamp": "2026-10-30T12:13:36.455397+00:00",
+      "step": 8,
+      "event": "model_action",
+      "decision_node": "decision",
+      "action": {
+        "type": "tool",
+        "name": "save_plan",
+        "arguments": {},
+        "reason": "当前方案版本2估算费用4单位、耗时2.5小时，预算与截止时间均满足，且方案指纹与最新估算一致，可以保存。"
+      },
+      "tool_node": "execute_tool",
+      "observation": {
+        "step": 8,
+        "tool": "save_plan",
+        "arguments": {},
+        "status": "succeeded",
+        "result": {
+          "saved": true,
+          "status": "saved",
+          "plan_id": "plan-ce140dcc8b27a07b",
+          "duplicate": false,
+          "path": "examples\\deepseek-run\\store\\ce140dcc8b27a07b4eee9229c865ee00d94f434d25c4f7affc52900c165b71aa.json"
+        }
+      },
+      "result_summary": {
+        "saved": true,
+        "status": "saved",
+        "plan_id": "plan-ce140dcc8b27a07b",
+        "duplicate": false,
+        "path": "examples\\deepseek-run\\store\\ce140dcc8b27a07b4eee9229c865ee00d94f434d25c4f7affc52900c165b71aa.json"
+      }
+    }
+  ],
+  "node_events": [
+    {
+      "node": "prepare",
+      "timestamp": "2026-10-30T12:13:26.477195+00:00"
+    },
+    {
+      "node": "decision",
+      "timestamp": "2026-10-30T12:13:26.489427+00:00"
+    },
+    {
+      "node": "execute_tool",
+      "timestamp": "2026-10-30T12:13:27.875494+00:00"
+    },
+    {
+      "node": "decision",
+      "timestamp": "2026-10-30T12:13:27.876874+00:00"
+    },
+    {
+      "node": "execute_tool",
+      "timestamp": "2026-10-30T12:13:29.636520+00:00"
+    },
+    {
+      "node": "decision",
+      "timestamp": "2026-10-30T12:13:29.637521+00:00"
+    },
+    {
+      "node": "execute_tool",
+      "timestamp": "2026-10-30T12:13:31.167214+00:00"
+    },
+    {
+      "node": "decision",
+      "timestamp": "2026-10-30T12:13:31.168216+00:00"
+    },
+    {
+      "node": "execute_tool",
+      "timestamp": "2026-10-30T12:13:32.277196+00:00"
+    },
+    {
+      "node": "decision",
+      "timestamp": "2026-10-30T12:13:32.279215+00:00"
+    },
+    {
+      "node": "execute_tool",
+      "timestamp": "2026-10-30T12:13:33.592403+00:00"
+    },
+    {
+      "node": "decision",
+      "timestamp": "2026-10-30T12:13:33.593406+00:00"
+    },
+    {
+      "node": "execute_tool",
+      "timestamp": "2026-10-30T12:13:35.260179+00:00"
+    },
+    {
+      "node": "decision",
+      "timestamp": "2026-10-30T12:13:35.262180+00:00"
+    },
+    {
+      "node": "execute_tool",
+      "timestamp": "2026-10-30T12:13:36.453424+00:00"
+    },
+    {
+      "node": "decision",
+      "timestamp": "2026-10-30T12:13:36.455397+00:00"
+    },
+    {
+      "node": "execute_tool",
+      "timestamp": "2026-10-30T12:13:37.454117+00:00"
+    },
+    {
+      "node": "finalize",
+      "timestamp": "2026-10-30T12:13:37.469511+00:00"
+    }
+  ]
+}

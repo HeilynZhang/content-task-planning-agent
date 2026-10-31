@@ -1,0 +1,31 @@
+{
+  "metadata": {
+    "mode": "mock",
+    "scenario": "normal",
+    "decision_evidence": "none_scripted_actions",
+    "started_at": "2026-10-30T09:32:02.859378+00:00",
+    "finished_at": "2026-10-30T09:32:02.859378+00:00",
+    "runtime_seconds": 0.0,
+    "max_steps": 12,
+    "max_model_calls": 12
+  },
+  "request": {
+    "topic": "虚构新品推广",
+    "budget": 10,
+    "deadline_hours": 8,
+    "request_id": "example-normal"
+  },
+  "events": [
+    {
+      "timestamp": "2026-10-30T09:32:02.859378+00:00",
+      "event": "idempotent_reuse",
+      "result": {
+        "saved": true,
+        "status": "reused",
+        "duplicate": true,
+        "plan_id": "plan-e1f345d8d18f531f",
+        "path": "D:\\xiaoying\\examples\\offline-run\\store\\e1f345d8d18f531fef2d80d1ccb92be368a22aa9ee08d150d60590fd777b4956.json"
+      }
+    }
+  ]
+}

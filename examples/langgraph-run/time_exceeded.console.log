@@ -1,0 +1,24 @@
+图节点：prepare
+图节点：decision
+模型调用 1/12，等待下一步动作…
+图节点：execute_tool
+步骤 1/12：执行 search_materials
+search_materials 成功
+图节点：decision
+模型调用 2/12，等待下一步动作…
+图节点：execute_tool
+步骤 2/12：执行 generate_script
+generate_script 成功
+图节点：decision
+模型调用 3/12，等待下一步动作…
+图节点：execute_tool
+步骤 3/12：执行 estimate_plan
+estimate_plan 成功
+图节点：decision
+模型调用 4/12，等待下一步动作…
+图节点：execute_tool
+步骤 4/12：执行 save_plan
+动作失败：拒绝保存：预算或时间未满足；费用缺口 0.0，时间缺口 60.0 分钟；保留已有成功结果，交给模型决定下一步
+图节点：decision
+模型调用 5/12，等待下一步动作…
+图节点：finalize

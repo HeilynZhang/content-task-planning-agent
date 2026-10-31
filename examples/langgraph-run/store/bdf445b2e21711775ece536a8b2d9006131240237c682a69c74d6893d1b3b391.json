@@ -1,0 +1,10 @@
+{
+  "request": {
+    "request_id": "example-save-failure",
+    "topic": "虚构新品推广",
+    "budget": 10.0,
+    "deadline_hours": 8.0
+  },
+  "request_hash": "3d2fac4bb3259fb9ae3b001398688b03d81ced8ebdd1462288d1d800eda18eb6",
+  "saved_plan": null
+}
